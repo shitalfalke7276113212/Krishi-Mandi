@@ -1,0 +1,275 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@600&family=Poppins:ital,wght@1,200&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+body{
+    animation: transitionIn 0.75s;
+    font-family: 'Lato',sans-serif;
+
+}
+    
+    
+.banner-card{
+    position: relative;
+}
+
+.banner-card img{
+    max-width: 100%;
+    height: auto;
+    margin-top: 0%;
+
+}
+.banner-text{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+
+}
+.banner-text header{
+    font-size: 30px;
+        font-weight: 600;
+        color: orangered;
+        padding-bottom: 15px;
+        border-bottom-style: solid;
+        border-bottom-width: 3.1px ;
+        width: fit-content;
+    margin-left: 190px;
+     }
+     .banner-text header a{
+        color: black;
+        text-decoration: none;
+     }
+    
+.form{
+    width: 500px; 
+    background:whitesmoke;
+    border-radius: 5px;
+    text-align: center;
+    padding: 30px 30px 5px 30px;
+    box-shadow: 0px 5px 20px 10px rgba(0,0,0,0.2);
+    margin-top: 20px;
+ }
+
+.form form{
+    margin: 40px 0;
+}
+form.field{
+    width: 100%;
+    margin-bottom: 20px;
+}
+form .field .input-area{
+    position: relative;
+}
+form input{
+    height: 40px;
+    width: 75%;
+    outline: none;
+    padding: 0 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #34495e;
+    border-bottom-width: 2px;
+   margin:10px;
+   margin-left: 60px;
+   
+}
+form .check-button{
+ width: 20px;
+ height: 20px;
+}
+form input::placeholder{
+    color: #bfbfbf;
+    font-size: 17px;
+}
+form .field i{
+    position: absolute;
+    top: 50%;
+    font-size: 18px;
+    pointer-events: none;
+   transform: translateY(-50%);
+}
+form .field .icon{
+    right: 40px;
+    color:#34495e
+}
+
+form input[type="submit"]{
+    margin-top: 2   0px;
+    width: auto;
+    height: 35px;
+    padding-left: 20px;
+    padding-right: 30px;
+    border: none;
+    background:  #34495e;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+form input[type="submit"]:hover{
+    background: rgb(145, 145, 203);
+}
+button{
+    color: whitesmoke;
+    width: 100px;
+    height: 40px;
+    background-color:   #446585;
+}
+
+
+form label a{
+    margin-left: auto;
+    margin: auto;
+}
+form a{
+    margin-left: 250px;
+    color: blue;
+    margin: auto;
+
+}
+
+small{
+    color: red;
+} 
+*/
+/*****************************---------------------*************************/
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@600&family=Poppins:ital,wght@1,200&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+body{
+    animation: transitionIn 0.75s;
+    font-family: 'Lato',sans-serif;
+}
+    
+    
+.banner-card{
+    position: relative;
+}
+
+.banner-card img{
+    height:800px;
+    margin-top: 0%;
+    width: 100%;
+    
+}
+.banner-text{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+
+}
+.banner-text header{
+    font-size: 30px;
+        font-weight: 600;
+        color: orangered;
+        padding-bottom: 15px;
+        border-bottom-style: solid;
+        border-bottom-width: 3.1px ;
+        width: fit-content;
+    margin-left: 190px;
+     }
+     .banner-text header a{
+        color: black;
+        text-decoration: none;
+     }
+    
+.form{
+    width: 500px; 
+    background:whitesmoke;
+    border-radius: 5px;
+    text-align: center;
+    padding: 30px 30px 5px 30px;
+    box-shadow: 0px 5px 20px 10px rgba(0,0,0,0.2);
+    margin-top: 20px;
+ }
+
+.form form{
+    margin: 40px 0;
+}
+form.field{
+    width: 100%;
+    margin-bottom: 20px;
+}
+form .field .input-area{
+    position: relative;
+}
+form input{
+    height: 40px;
+    width: 75%;
+    outline: none;
+    padding: 0 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #34495e;
+    border-bottom-width: 2px;
+   margin:10px;
+   margin-left: 60px;
+   
+}
+form .check-button{
+ width: 20px;
+ height: 20px;
+}
+form input::placeholder{
+    color: #bfbfbf;
+    font-size: 17px;
+}
+form .field i{
+    position: absolute;
+    top: 50%;
+    font-size: 18px;
+    pointer-events: none;
+   transform: translateY(-50%);
+}
+form .field .icon{
+    right: 40px;
+    color:#34495e
+}
+
+form input[type="submit"]{
+    margin-top: 2   0px;
+    width: auto;
+    height: 35px;
+    padding-left: 20px;
+    padding-right: 30px;
+    border: none;
+    background:  #34495e;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+form input[type="submit"]:hover{
+    background: rgb(145, 145, 203);
+}
+button{
+    color: whitesmoke;
+    width: 100px;
+    height: 40px;
+    background-color:   #446585;
+}
+
+
+form label a{
+    margin-left: auto;
+    margin: auto;
+}
+form a{
+    margin-left: 250px;
+    color: blue;
+    margin: auto;
+
+}
+
+small{
+    color: red;
+} 

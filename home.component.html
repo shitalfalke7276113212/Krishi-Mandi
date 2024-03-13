@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="banner-card">
+
+            <img src="assets/homebackground3.jpeg" class="d-block w-100" alt="..." height="400px">
+            <div class="banner-text">
+
+                <div class="container">
+                    <div class="left">
+                        <h1>Welcome to <b> Aapki Apni Mandi </b></h1>
+                        <button>Market Watch Info</button>
+                    </div>
+                    <div class="right">
+                        <p>
+                            Online trading of agricultural commodities is a step towards blooming of farmers and
+                            their livelihood where they can get a justified worth of their commodities. E-Krishi
+                            Mandi has came out with the notion to provide price discovery to the farmers or to
+                            make offline mandi operation smooth and secure via online portal and payment
+                            settlement. It introduces a concept of direct selling of farmer produce through e
+                            commerce resulting in to time saving and digitalization of all records. Better Price
+                            discovery of agri commodities for farmers/traders/corporates. Conveyance to farmer
+                            community through availability of storage, commodity grading, lodging and boarding
+                            facilities for farmers at the locations. Reliable & Modest platform to get fair
+                            price of agri produce. Live commodity rates are available to evaluate market demand
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!----------------------------------------Market Watch---------------------------------------------------->
+    <h3>Market Watch</h3>
+    <div class="cart">
+        <div class="marketwatch">
+            <ul>
+                <li>From<br>
+                    <input type="date">
+                </li>
+                <!----to display current date-->
+                <li>To <br>
+                    <input type="date" [value]=TodayDate>
+                </li>
+                <li><a href=""><button>LOOK UP</button></a></li>
+            </ul>
+            <hr class="my-4">
+        </div>
+        <!-----To show Nafed Daily price excel sheet aand download button-->
+        <!--div class="nafedprice">
+            <ul>
+                <li>
+                    <h2>Nafed Daily Price</h2>
+                </li>
+                <li>
+                    <p>Search: <input type="search">
+                        <a href="#"><i class="fa-regular fa-file-excel fa-2x"></i></a>
+                    </p>
+                </li>
+            </ul>
+        </div-->
+        <nav class="container">
+            <!-- right nav -->
+            <ul class="right-side">
+                <li><h2> Nafed Daily Price</h2> </li>
+            </ul>
+            <!-- left nav -->
+            <ul class="left-side">
+                <li>Search:<input type="search"></li>
+                <li><a href="#"><i class="fa-regular fa-file-excel fa-2x"></i> </a></li>
+    
+    </ul>
+        </nav>
+    
+
+
+
+
+
+        <!---------------------------------------Nafed Daily price table-->
+        <div class="example-container mat-elevation-z8">
+            <mat-table #table [dataSource]="dataSource">
+
+                <!--- Note that these columns can be defined in any order.
+                            The actual rendered columns are set as a property on the row definition" -->
+
+                <ng-container matColumnDef="date">
+                    <mat-header-cell *matHeaderCellDef [style.background-color]="color"> Date </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.date}} </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="season">
+                    <mat-header-cell *matHeaderCellDef [style.background-color]="color"> Season
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.season}} </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="state">
+                    <mat-header-cell *matHeaderCellDef [style.background-color]="color"> State
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.state}} </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="commodity">
+                    <mat-header-cell *matHeaderCellDef [style.background-color]="color"> Commodity
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.commodity}} </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="minprice">
+                    <mat-header-cell *matHeaderCellDef [style.background-color]="color"> Min Price
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.minprice}} </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="maxprice">
+                    <mat-header-cell *matHeaderCellDef [style.background-color]="color"> Max Price
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.maxprice}} </mat-cell>
+                </ng-container>
+
+
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </mat-table>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="banner-card1">
+
+        <img src="assets/tablebackground.jpg" class="d-block w-100" alt="..." height="800px">
+        <br>
+        <br>
+        <div class="banner-text1">
+            <br>
+            <br>
+            <div class="cart1">
+                <div class="upauctions">
+                    <ul>
+                        <li>
+                            <h2>Upcoming Auctions</h2>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-regular fa-file-excel fa-2x"></i></a>
+                        </li>
+                    </ul>
+                    <app-upcomingauction></app-upcomingauction>
+                </div>
+            </div>
+
+            <div class="cart2">
+                <div class="pastauctions">
+                    <ul>
+                        <li>
+                            <h2>Past Auctions</h2>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-regular fa-file-excel fa-2x"></i></a>
+                        </li>
+                    </ul>
+                    <app-pastauction></app-pastauction>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!----------------------------------------Our Track -------------->
+    <div class="track">
+        <div class="leftbox">
+            <br>
+            <br>
+            <br>
+            <ul>
+                <li>
+                    <a href="#"><i class="fa-solid fa-gavel fa-2x" ></i></a>
+                </li>
+                <li><p> 170243</p></li>
+                <li>
+                    <h5> Auctions</h5>
+                </li>
+            </ul>
+        </div>
+
+        <div class="middlebox">
+            <h4><p>Our Track</p></h4>
+            <ul>
+                <li>
+                    <a href="#"><i class="fa-solid fa-handshake fa-2x"></i></a>
+                </li>
+                
+                <li><p>41443</p> </li>
+                <li>
+                    <h5>Binding</h5>
+                </li>
+            </ul>
+        </div>
+
+        <div class="rightbox">
+            <br>
+            <br>
+            <br>
+            <ul>
+                <li>
+                    <a href="#"><i class="fa-solid fa-users fa-2x"></i></a>
+                </li>
+                
+                <li><p>&nbsp;5244 </p></li>
+                <li>
+                    <h5> Members</h5>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+</body>

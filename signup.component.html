@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<div class="banner-card">
+    <img src="assets/signupbackground.jpg" >
+    
+    <div class="banner-text">
+        <div class="form">
+            <h3 style="text-align: center">Sign Up</h3>
+            <br>
+           
+            <form [formGroup]="signupForm">
+            <div class="row">
+                <div class="col">
+                    <div style="margin-right: 85%;">
+                        <label>Mobile</label>
+                    </div>
+                    <div class="input-group mb-2" style="margin-top: 10px;">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><span class="input-group-addon">
+                                    <i class="ace-icon fa fa-mobile"></i>
+                                </span></div>
+                        </div>
+                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Mobile Number"
+                            type="text" class="form-control " (keypress)="numberOnly($event)"   [ngClass]="{ 'is-invalid': submitted && f['mobile'].errors }" maxlength="10" formControlName="mobile" [(ngModel)]="mobile"/>
+                            <div *ngIf="submitted && f['mobile'].errors" class="invalid-feedback">
+                                <div *ngIf="f['mobile'].errors['required']" style="margin-right: 340px;">Mobile Number is required</div>
+                                <div *ngIf="signupForm.get('mobile').hasError('minlength')" style="margin-right:290px;">
+                                    Mobile Number is required 10 digit
+                                  </div>
+                            </div>
+                    </div>
+                </div>
+              
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div style="margin-right: 85%;">
+                        <label>Name</label>
+                    </div>
+                    <div class="input-group mb-2" style="margin-top: 10px;">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><span class="input-group-addon">
+                                    <i class="ace-icon fa fa-user"></i>
+                                </span></div>
+                        </div>
+                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Name"
+                            type="text" class="form-control "  [ngClass]="{ 'is-invalid': submitted && f['name'].errors }"  formControlName="name"  [(ngModel)]="name"/>
+                            <div *ngIf="submitted && f['name'].errors" class="invalid-feedback">
+                                <div *ngIf="f['name'].errors['required']" style="margin-right:396px;">Name is required</div>
+                            
+                            </div>
+                    </div>
+                </div>
+              
+            </div>
+            <textarea class="form-control" readonly rows="3">{{conversionEncryptOutput}}</textarea>
+            <br>
+            <button type="button" class="btn btn-success float-right"  (click)="convertText('encrypt')">Encrypt</button>
+            <div class="row" style="margin-left:404px; margin-top: 25px;">
+                <button button color="white" class="btn px-3"
+                (click)="submit()" >Proceed</button>
+            </div>
+         <div class="row" style="margin-top: 0px; margin-left: 5px;">
+            <label class="control-label lbl " style="text-decoration: underline; margin-top: 7px;">Already a Member? </label>
+            <button type="button"  (click)="login()" id="btnLoginLink" class="btn btn-md btn-link" style="color: #CF6D17 !important; font-weight: bold">LOGIN</button>
+         </div>
+            
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

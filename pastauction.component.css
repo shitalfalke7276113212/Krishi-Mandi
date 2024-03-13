@@ -1,0 +1,25 @@
+/*.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-table {
+  overflow: auto;
+  max-height: 500px;
+  color: black;
+
+}
+
+mat-header-cell {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+
+}*/
+
+.table-striped>tbody>tr.activeRow{
+  background-color: #d9d9d9;
+}
+.active3 {
+  background-color: #d9d9d9 !important;
+}

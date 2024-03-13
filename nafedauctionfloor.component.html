@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+<div>
+  <h6 class="heading" style="text-align: center;">NAFED Raj MP GJ UP and HR Auctions</h6>
+</div>
+
+
+<div class="example-container mat-elevation-z8">
+<div class="row">
+  <div class="col">
+<input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Choose Auction House"  type="text" class="form-control "  />
+
+</div>
+<div class="col">
+  <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Choose Commodity"  type="text" class="form-control "  />
+
+  </div>
+  <div class="col">
+    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Choose State"  type="text" class="form-control "  />
+  
+    </div>
+  <div class="col">
+    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Choose Warehouse"  type="text" class="form-control "  />
+  </div>
+  <div class="col">
+
+    <input type="button" id="btn1" class="btn btn-xs btn-info" value="Clear Filter"
+                 >
+    </div>
+</div>
+  <mat-table #table [dataSource]="dataSource">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <mat-header-cell *matHeaderCellDef> Auction Id / Auction House </mat-header-cell>
+      <mat-cell *matCellDef="let element">  </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Commodity / Season </mat-header-cell>
+      <mat-cell *matCellDef="let element">  </mat-cell>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="weight">
+      <mat-header-cell *matHeaderCellDef> Desc </mat-header-cell>
+      <mat-cell *matCellDef="let element">  </mat-cell>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <mat-header-cell *matHeaderCellDef> Location / Warehouse </mat-header-cell>
+      <mat-cell *matCellDef="let element"> </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="time">
+      <mat-header-cell *matHeaderCellDef> Auction Time / Matching Time </mat-header-cell>
+      <mat-cell *matCellDef="let element"> </mat-cell>
+    </ng-container>  
+    <ng-container matColumnDef="offqty">
+
+      <mat-header-cell *matHeaderCellDef>Off. Qty </mat-header-cell>
+      <mat-cell *matCellDef="let element"> </mat-cell>
+    </ng-container>  
+    <ng-container matColumnDef="baseprice">
+
+      <mat-header-cell *matHeaderCellDef> Base Price </mat-header-cell>
+      <mat-cell *matCellDef="let element"> </mat-cell>
+    </ng-container> 
+     <ng-container matColumnDef="bidprice">
+
+      <mat-header-cell *matHeaderCellDef> Best Bid Price</mat-header-cell>
+      <mat-cell *matCellDef="let element"> </mat-cell>
+    </ng-container>  
+    <ng-container matColumnDef="bid">
+
+      <mat-header-cell *matHeaderCellDef> My Last Bid</mat-header-cell>
+      <mat-cell *matCellDef="let element"> </mat-cell>
+    </ng-container>  
+    <ng-container matColumnDef="lastqty">
+
+      <mat-header-cell *matHeaderCellDef> My Last Qty </mat-header-cell>
+      <mat-cell *matCellDef="let element"> </mat-cell>
+    </ng-container> 
+     <ng-container matColumnDef="allocation">
+
+      <mat-header-cell *matHeaderCellDef>My Allocation</mat-header-cell>
+      <mat-cell *matCellDef="let element"> </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="timeleft">
+
+      <mat-header-cell *matHeaderCellDef>Time Left</mat-header-cell>
+      <mat-cell *matCellDef="let element"> </mat-cell>
+    </ng-container>  <ng-container matColumnDef="ext">
+
+      <mat-header-cell *matHeaderCellDef>Ext.</mat-header-cell>
+      <mat-cell *matCellDef="let element"> </mat-cell>
+    </ng-container>  <ng-container matColumnDef="price">
+
+      <mat-header-cell *matHeaderCellDef>Bid / Match Price</mat-header-cell>
+      <mat-cell *matCellDef="let element"> </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="qty">
+
+      <mat-header-cell *matHeaderCellDef>Bid / Match Qty</mat-header-cell>
+      <mat-cell *matCellDef="let element"> </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="message">
+
+      <mat-header-cell *matHeaderCellDef>Message</mat-header-cell>
+      <mat-cell *matCellDef="let element"> </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+  <mat-paginator #paginator
+                 [pageSize]="10"
+                 [pageSizeOptions]="[5, 10, 20]">
+  </mat-paginator>
+</div>
+
+
+
+</body>
+</html>

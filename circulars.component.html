@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: none;
+      text-align: left;
+      padding: 15px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
+  <h2><p>Circulars</p></h2>
+  <!-----------To display Records/page size and length---------->
+  <nav class=" pagination">
+    <ul class="right-side">
+      <mat-paginator [length]="100"
+      [pageSize]="10"
+      [pageSizeOptions]="[5, 10, 25, 100]"
+      aria-label="Select page">
+</mat-paginator>
+
+
+    </ul>
+    <ul class="left-side">
+      <p>Search : <input type="search"></p>
+
+</ul>
+</nav>
+
+  <!---------------Excel sheet Data is display here-------------------------->
+
+
+
+
+  <!-- <div class="example-container mat-elevation-z8">
+    <mat-table #table [dataSource]="dataSource">
+
+      <ng-container matColumnDef="circulartitle">
+        <mat-header-cell *matHeaderCellDef [style.background-color]="color">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Circular Title </mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.circulartitle}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="circulardate">
+        <mat-header-cell *matHeaderCellDef [style.background-color]="color"> Circular Date </mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.circulardate}} </mat-cell>
+      </ng-container>
+
+
+      <ng-container matColumnDef="description">
+        <mat-header-cell *matHeaderCellDef [style.background-color]="color"> Description </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="download">
+        <mat-header-cell *matHeaderCellDef [style.background-color]="color"> Download</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.download}} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+  </div> -->
+
+
+  <table>
+    <tr class="mat-header-cell">
+      <th>Circular Title </th>
+      <th>Circular Date </th>
+      <th>Description</th>
+      <th>Download</th>
+
+    </tr>
+    <tr>
+      <td>PSS Sale Contract Note Mustard R-23 HARYANA</td>
+      <td>16 Sep 2023</td>
+      <td>PSS Sale Contract Note Mustard R-23 HARYANA</td>
+      <td>
+        <button id="btnINDDOC09162023663974" class="btn btn-sm btn-info" (click)="pdf()">Download</button>
+      </td>
+
+    </tr>
+    <tr>
+      <td>Sale of Mustard Seed procured under PSS R-23 RAJASTHAN - Contract Note</td>
+      <td>16 Sep 2023</td>
+      <td>Commencing the sale of Mustard Seed procured under PSS R-23 RAJASTHAN -</td>
+      <td>
+        <button id="btnINDDOC09162023663974" class="btn btn-sm btn-info" (click)="pdf()">Download</button>
+      </td>
+    </tr>
+    <tr>
+      <td>CONTRACT NOTE LUCKNOW GRAM PSF R-20 stocks</td>
+      <td>28 Aug 2023</td>
+      <td>CONTRACT NOTE LUCKNOW GRAM PSF R-20 stocks</td>
+      <td>
+        <button id="btnINDDOC09162023663974" class="btn btn-sm btn-info" (click)="pdf()">Download</button>
+      </td>
+    </tr>
+    <tr>
+      <td>CONTRACT NOTE LUCKNOW Gram PSS R-22 stocks</td>
+      <td>28 Aug 2023</td>
+      <td>CONTRACT NOTE LUCKNOW Gram PSS R-22 stocks</td>
+      <td>
+        <button id="btnINDDOC09162023663974" class="btn btn-sm btn-info" (click)="pdf()">Download</button>
+      </td>
+    </tr>
+    <tr>
+      <td>PSS Sale GRAM R-23 RAJASTHAN Contract note</td>
+      <td>22 Aug 2023</td>
+      <td>PSS Sale GRAM R-23 RAJASTHAN Contract note</td>
+      <td>
+        <button id="btnINDDOC09162023663974" class="btn btn-sm btn-info" (click)="pdf()">Download</button>
+      </td>
+    </tr>
+    <tr>
+      <td>PSS Sale Contract note 21.08.2023 GUJARAT</td>
+      <td>21 Aug 2023</td>
+      <td>PSS Sale Contract note 21.08.2023 GUJARAT</td>
+      <td>
+        <button id="btnINDDOC09162023663974" class="btn btn-sm btn-info" (click)="pdf()">Download</button>
+      </td>
+    </tr>
+    <tr>
+      <td>PSS Gram R23 Sale Contract MAHARASHTRA</td>
+      <td>21 Aug 2023</td>
+      <td>PSS Gram R23 Sale Contract MAHARASHTRA</td>
+      <td>
+        <button id="btnINDDOC09162023663974" class="btn btn-sm btn-info" (click)="pdf()">Download</button>
+      </td>
+    </tr>
+    <tr>
+      <td>PSS Contract - PSS Gram R-2023 KARNATAKA</td>
+      <td>21 Aug 2023</td>
+      <td>PSS Contract - PSS Gram R-2023 KARNATAKA</td>
+      <td>
+        <button id="btnINDDOC09162023663974" class="btn btn-sm btn-info" (click)="pdf()">Download</button>
+      </td>
+    </tr>
+
+    <tr>
+      <td>PSS Chana R-23 TS Contract Note</td>
+      <td>21 Aug 2023</td>
+      <td>PSS Chana R-23 TS Contract Note</td>
+      <td>
+        <button id="btnINDDOC09162023663974" class="btn btn-sm btn-info" (click)="pdf()" >Download</button>
+      </td>
+    </tr>
+
+    <tr>
+      <td>PSS Chana R-23 AP Contract Note</td>
+      <td>21 Aug 2023</td>
+      <td>PSS Chana R-23 AP Contract Note</td>
+      <td>
+        <button id="btnINDDOC09162023663974" class="btn btn-sm btn-info" (click)="pdf()" >Download</button>
+      </td>
+    </tr>
+  </table>
+
+
+
+  <br>
+  <br>
+<br>
+<br>
+
+
+
+
+
+  <!-----------------------------------To chages the pages---------------->
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-end">
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1">Previous</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">4</a></li>
+      <li class="page-item"><a class="page-link" href="#">5</a></li>
+      <li class="page-item"><a class="page-link" href="#">6</a></li>
+      <li class="page-item"><a class="page-link" href="#">7</a></li>
+      <li class="page-item"><a class="page-link" href="#">8</a></li>
+      <li class="page-item"><a class="page-link" href="#">9</a></li>
+      <li class="page-item"><a class="page-link" href="#">10</a></li>
+
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+</body>
+
+</html>

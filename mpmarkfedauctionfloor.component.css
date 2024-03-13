@@ -1,0 +1,11 @@
+body{
+    height: 100vh;
+}
+
+.btn{
+    border-color: #a0a0a0!important;
+    background-color: #a0a0a0!important;
+    padding: 1px 5px;
+    font-size: 12px;
+    border-radius: 0;
+}

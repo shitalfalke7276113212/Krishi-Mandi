@@ -1,0 +1,286 @@
+<!--!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" contant="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>Website</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="login.component.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="banner-card">
+        <img src="assets/loginbackground.jpg" style="    height:720px;  width: 100%;"  >
+
+        <div class="banner-text">
+            <header><a href="#">Login</a></header>
+
+            <div class="form">
+                <form [formGroup]="LoginForm"  (ngSubmit)="login()">
+                    <div class="banner-card">
+                        <div class="form-group"-->
+<!--<label>Username</label>-->
+<!--input type="text" placeholder="Username"
+                                [class.is-invalid]="LoginForm.get('username').invalid  && LoginForm.get('username').touched"
+                                formControlName="username" type="text" class="form-control">
+
+                            <div *ngIf="LoginForm.get('username').invalid  && LoginForm.get('username').touched">
+                                <small *ngIf="LoginForm.get('username').errors?.required" class="text-danger">
+                                    Username is Required.
+                                </small>
+                                <small *ngIf="LoginForm.get('username').errors?.minLength" class="text-danger">
+                                    Username must be at least 6 characters
+                                </small>
+                                <small *ngIf="LoginForm.get('username').errors?.pattern" class="text-danger">
+                                    Username contain combination of letters and numbers.(like, abc1234)
+                                </small>
+                            </div>
+                            <div class="form-group" autocomplete="off">
+                                    <input  type="password"   placeholder="password"
+                                        [class.is-invalid]="LoginForm.get('password').invalid  && LoginForm.get('password').touched"
+                                        formControlName="password" type="password" class="form-control">
+                                </div>
+                                <div *ngIf="LoginForm.get('password').invalid  && LoginForm.get('password').touched">
+                                    <small *ngIf="LoginForm.get('password').errors?.required" class="text-danger">
+                                        Password is Required.
+                                    </small>
+                                    <small *ngIf="LoginForm.get('password').errors?.minLength" class="text-danger">
+                                        Length of password must be at least 8 characters.
+                                    </small>
+                                    <small *ngIf="LoginForm.get('password').errors?.maxLength" class="text-danger">
+                                        Length of password is less than 25.
+                                    </small>
+                                </div>
+                            <div class="input-name">
+                                <input type="checkbox" class="check-button">
+                                <label>I agree to the <a href="">Terms and Condition</a></label>
+                            </div>
+                            <nav>
+                                <p>If you are new here then
+                                    <a href="clientregistration">Register</a><br>
+                                    <br>
+                                    <button type="submit"    >Login</button>&nbsp;
+                                    <button type="reset"> Clear</button>
+
+                                </p>
+                            </nav>
+                            <br-->
+
+<!--input type="Submit" value="Forgot password"-->
+
+
+
+
+<!------------------------new codeee------------------------------>
+
+<!DOCTYPE html>
+<!--html lang="en">
+
+<head>
+    <meta name="viewport" contant="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>Website</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="login.component.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="banner-card">
+        <img src="assets/loginbackground.jpg">
+
+        <div class="banner-text">
+            <header><a href="#">Login</a></header>
+
+            <div class="form">
+
+
+                    <form [formGroup]="LoginForm">
+                 <ng-hcaptcha formControlName="captcha"></ng-hcaptcha-->
+<!-- <ngx-recaptcha2 #captchaElem
+                 [siteKey]="'6LeOZ4YUAAAAAJ8clQYNtOXNDHsd58KZHyJeILk6'"
+                 (success)="handleSuccess($event)"
+                 [useGlobalDomain]="false"
+                 formControlName="recaptcha">
+               </ngx-recaptcha2> -->
+<!--div class="banner-card">
+             <div class="form-group"-->
+
+
+<!--<label>Username</label>-->
+<!--input type="text" placeholder="Username"
+                                    [class.is-invalid]="LoginForm.get('username').invalid  && LoginForm.get('username').touched"
+                                    formControlName="username" type="text" class="form-control">
+                                    `
+                                        
+                       <div *ngIf="LoginForm.get('username').invalid  && LoginForm.get('username').touched">
+                                    <small *ngIf="LoginForm.get('username').errors?.required" class="text-danger">
+                                        Username is Required.
+                                    </small>
+                                    <small *ngIf="LoginForm.get('username').errors?.minLength" class="text-danger">
+                                        Username must be at least 6 characters
+                                    </small>
+                                    <small *ngIf="LoginForm.get('username').errors?.pattern" class="text-danger">
+                                        Username contain combination of letters and numbers.(like, abc1234)
+                                    </small>
+                                    
+                                    
+                            
+                                </div>
+
+                          <div class="form-group">
+                                    <input type="password" placeholder="password"
+                                        [class.is-invalid]="LoginForm.get('password').invalid  && LoginForm.get('password').touched"
+                                        formControlName="password" type="password" class="form-control">
+                                </div>
+                                <div *ngIf="LoginForm.get('password').invalid  && LoginForm.get('password').touched">
+                                    <small *ngIf="LoginForm.get('password').errors?.required" class="text-danger">
+                                        Password is Required.
+                                    </small>
+                                    <small *ngIf="LoginForm.get('password').errors?.minLength" class="text-danger">
+                                        Length of password must be at least 8 characters.
+                                    </small>
+                                    <small *ngIf="LoginForm.get('password').errors?.maxLength" class="text-danger">
+                                        Length of password is less than 25.
+                                    </small>
+                                </div>
+                                <div class="input-name">
+                                    <input type="checkbox" class="check-button">
+                                    <label>I agree to the <a href="">Terms and Condition</a></label>
+                                </div>
+                                <nav>
+                             
+                                    <p>If you are new here then
+                                        <a href="signup">Register</a><br>
+                                        <br>
+                                        <button type="submit" (click)="login()">Login</button>&nbsp;
+                                        <button type="reset"> Clear</button>
+
+                                    </p>
+                                </nav>
+                                <br>
+                            </div-->
+
+<!--input type="Submit" value="Forgot password"-->
+
+<!--/div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" contant="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>Website</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="login.component.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="banner-card">
+        <img src="assets/loginbackground.jpg">
+
+        <div class="banner-text">
+            <header><a href="#">Login</a></header>
+
+            <div class="form">
+
+
+                <form [formGroup]="LoginForm">
+
+
+                    <div class="banner-card">
+                        <div class="form-group">
+
+
+                            <!--<label>Username</label>-->
+                            <input type="text" placeholder="Username"
+                                [class.is-invalid]="LoginForm.get('username').invalid  && LoginForm.get('username').touched"
+                                formControlName="username" type="text" class="form-control">
+                            
+
+                            <div *ngIf="LoginForm.get('username').invalid  && LoginForm.get('username').touched">
+                                <small *ngIf="LoginForm.get('username').errors?.required" class="text-danger">
+                                    Username is Required.
+                                </small>
+                                <small *ngIf="LoginForm.get('username').errors?.minLength" class="text-danger">
+                                    Username must be at least 6 characters
+                                </small>
+                                <small *ngIf="LoginForm.get('username').errors?.pattern" class="text-danger">
+                                    Username contain combination of letters and numbers.(like, abc1234)
+                                </small>
+
+
+
+                            </div>
+
+                            <div class="form-group">
+                                <input type="password" placeholder="password"
+                                    [class.is-invalid]="LoginForm.get('password').invalid  && LoginForm.get('password').touched"
+                                    formControlName="password" type="password" class="form-control">
+                            </div>
+                            <div *ngIf="LoginForm.get('password').invalid  && LoginForm.get('password').touched">
+                                <small *ngIf="LoginForm.get('password').errors?.required" class="text-danger">
+                                    Password is Required.
+                                </small>
+                                <small *ngIf="LoginForm.get('password').errors?.minLength" class="text-danger">
+                                    Length of password must be at least 8 characters.
+                                </small>
+                                <small *ngIf="LoginForm.get('password').errors?.maxLength" class="text-danger">
+                                    Length of password is less than 25.
+                                </small>
+                            </div>
+                            <div class="input-name">
+                                <input type="checkbox" class="check-button">
+
+                                <label>I agree to the <a href="">Terms and Condition</a></label>
+                            </div>
+                            <div>
+
+                                <ng-hcaptcha formControlName="captcha"></ng-hcaptcha>
+                                <div style="margin-left: 70px;">
+                                    <ngx-recaptcha2 #captchaElem [siteKey]="'6LeOZ4YUAAAAAJ8clQYNtOXNDHsd58KZHyJeILk6'"
+                                        (success)="handleSuccess($event)" [useGlobalDomain]="false"
+                                        formControlName="recaptcha">
+                                    </ngx-recaptcha2>
+                                </div>
+                            </div>
+                            <nav>
+
+                                <p>If you are new here then
+                                    <a href="signup">Register</a><br>
+                                    <br>
+                                    <button type="submit" (click)="login()">Login</button>&nbsp;
+                                    <button type="reset"> Clear</button>
+
+                                </p>
+                            </nav>
+                            <br>
+                        </div>
+
+                        <div>
+
+                        </div>
+                        <!--input type="Submit" value="Forgot password"-->
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

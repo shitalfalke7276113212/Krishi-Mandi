@@ -1,0 +1,92 @@
+<!--div class="example-container mat-elevation-z8">
+    <mat-table #table [dataSource]="dataSource">
+
+<ng-container matColumnDef="auctiontype">
+    <mat-header-cell *matHeaderCellDef [style.background-color]="color" > Auction<br> Type </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.auctiontype}} </mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="commodity">
+    <mat-header-cell *matHeaderCellDef [style.background-color]="color" > Commodity
+    </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.commodity}} </mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="seller">
+    <mat-header-cell *matHeaderCellDef [style.background-color]="color"> Seller
+    </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.seller}} </mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="location">
+    <mat-header-cell *matHeaderCellDef [style.background-color]="color" > Location
+    </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.location}} </mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="from">
+    <mat-header-cell *matHeaderCellDef [style.background-color]="color" >From
+    </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.from}} </mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="to">
+    <mat-header-cell *matHeaderCellDef [style.background-color]="color">To
+    </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.to}} </mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="tradequality">
+    <mat-header-cell *matHeaderCellDef [style.background-color]="color">Trade Quality
+    </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.tradequality}} </mat-cell>
+</ng-container>
+<ng-container matColumnDef="tradeprice">
+    <mat-header-cell *matHeaderCellDef [style.background-color]="color" >Trade Price
+    </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.tradeprice}} </mat-cell>
+</ng-container>
+
+
+<ng-container matColumnDef="low">
+    <mat-header-cell *matHeaderCellDef [style.background-color]="color" >Low
+    </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.low}} </mat-cell>
+</ng-container>
+
+
+
+<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+<mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+</div-->
+
+<div class="example-container mat-elevation-z8">
+    <input type="file" (change)="onFileChange($event)" multiple="false" />
+    <table class="sjs-table">
+        <!--thead *ngFor="let row of data" style="font-size: 16px; background-color: blue;  color: black;"   >
+        </thead-->
+        <tbody>
+
+            <tr *ngFor="let row of data" style="font-size: 16px;  
+              
+            font-weight: bold; ">
+                <!--thead *ngFor="let row of data" style="font-size: 16px; background-color: blue;  color:white;"   >
+        </thead-->
+                <div class="heading">
+            <tr *ngFor="let row of data" aria-rowindex="2" style="font-size: 16px;  
+    background-color: blue;  color: white">
+
+            </tr>
+</div>
+<div class="tabledata">
+    <td *ngFor="let val of row" style="font-size: 16px;  background-color: white;
+                 color: black; font-weight: bold; ">
+
+        {{val}}
+    </td>
+</div>
+</tr>
+</tbody>
+</table>
+</div>
